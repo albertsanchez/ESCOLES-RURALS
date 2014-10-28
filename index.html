@@ -1,29 +1,111 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="UTF-8">
 	<title>ESCOLES RURALS</title>
 </head>
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="lib/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="lib/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="lib/css/animate.css">
+<link rel="stylesheet" type="text/css" href="lib/css/boostrap-social.css">
+<script type="text/javascript" src="lib/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="lib/js/popcorn.min.js"></script>
 <body>
 	<div class="wrapper">
 		<header>
-			<div class="logo"></div>
-			<nav class="menu-nav"></nav>
-		</header>
-		<div class="intro" style="background-image:url(img/fons-intro.png);width:100%;height:auto">
-			<!-- <img src="img/fons-intro.png" width="100%" height="100%" title="fons intro" /> -->
-			<div class="logo-documental"></div>
-			<div class="subtitul-documental"></div>
-			<div class="botons-idioma">
-				<button class="btn">CATALÀ</button>
-				<button class="btn">CASTELLÀ</button>
-				<button class="btn">ANGLÈS</button>
+			<div class="logo-webdoc col-md-4">LOGOTIP HORITZONTAL</div>
+			<div class="socialmedia col-md-1">
+				<a href="#"><i class="fa fa-facebook"></i></a>
+				<a href="#"><i class="fa fa-twitter"></i></a>
+				<a href="#"><i class="fa fa-youtube"></i></a>
+			</div>
+			<nav class="menu-nav col-md-7">								
+				<ul class="menu-items">
+					<li>ítem 1</li>
+					<li>ítem 2</li>
+					<li>ítem 3</li>
+					<li>ítem 4</li>
+				</ul>				
+			</nav>
+		</header>		
+		<div class="intro">
+			<!-- <img src="images/fons-intro.png" width="100%" height="" title="fons intro" /> -->
+			<video width="100%" onended="videoEnded()">
+				<source src="videos/prova.mp4" type="video/mp4">
+			</video>
+			<div class="content-intro">
+				<div class="logo-documental">
+					<h1>JO QUÈ HI PINTO</h1>
+				</div>
+				<div class="subtitul-documental">
+					<h3>Un webdoc sobre les escoles rurals</h3>
+				</div>
+				<div class="botons-idioma">
+					<button class="btn catala">CATALÀ</button>
+					<button class="btn castella">CASTELLÀ</button>
+					<button class="btn angles">ANGLÈS</button>
+				</div>				
+			</div>
+
+			<div class="login">
+				<h1 class="titul-login">logo doc</h1>
+				<div class="form">
+					<form class="formulari">
+						<div class="form-group">
+							<input type="email" class="form-control small" id="exampleInputEmail1" placeholder="Correu electrònic">
+						</div>
+						<div class="form-group">
+							<input type="password" class="form-control small" id="exampleInputEmail1" placeholder="Contrasenya">
+						</div>
+						<p class="recorda-pass">recorda contrasenya</p>
+						
+					</form>
+					<div class="login-social row">
+						<div class="facebook">
+							<a class="btn btn-social btn-sm btn-facebook col-md-6">
+						    	<i class="fa fa-facebook"></i> Sessió amb facebook
+						    </a>
+						</div>
+						<div class="twitter">
+							<a class="btn btn-social btn-sm btn-twitter col-md-6">
+						    	<i class="fa fa-twitter"></i> Sessió amb Twitter
+						    </a>
+						</div>
+					</div>
+				</div><br />
+
+				<button class="login-btn">registre</button>
 			</div>
 		</div>
 	</div>
-	<script>
-	</script>
+	
+
+<script>
+
+	$('.catala').click(function() {
+		  $('header').css('bottom','0px');
+		  $('.content-intro').fadeOut(2000);
+		  $('video').delay(500).css('-webkit-filter','blur(0px)');
+		  $("video").trigger("play");	  
+	});
+	
+	
+	function videoEnded() {
+	    console.log('video ended');
+	    $('.login').show();
+	    $('.login').show();
+	    $(".login-btn").click(function(){
+		    $.ajax({
+		    	url:"include/prova1.html",
+		    	success:function(result){
+			    	$(".intro").html(result);
+			    }
+			});
+		});	
+	}
+	
+	
+</script>
 </body>
 
 </html>

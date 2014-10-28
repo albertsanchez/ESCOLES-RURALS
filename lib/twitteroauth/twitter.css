@@ -1,0 +1,88 @@
+#twitter-feed {
+    overflow:auto;
+}
+#twitter-feed h1 {
+    color:#5F5F5F;
+    margin:0px;
+    padding:9px 0px 9px 0px;
+    font-size:18px;
+    font-weight:lighter;
+}
+.twitter-article, #loading-container {
+    border-top:1px dotted #CCC;
+    float:left;
+    padding:8px 0px 8px 0px;
+}
+.twitter-article:first-child {border: none;}
+
+#loading-container {
+    padding:16px 0px 16px 0px;
+    text-align:center;
+}
+.twitter-pic {
+    float:left;
+}
+ 
+.twitter-pic img {
+    float:left;
+    border:none;
+ 
+}
+ img  {
+     border:none;
+ }
+.twitter-text p {
+    margin:0px;
+    line-height:15px;
+}
+.twitter-text a:link,
+.twitter-text a:visited,
+h1 a:link,
+h1 a:visited {
+    color: #68b7d0;
+    text-decoration: none;
+}
+.twitter-text .tweetprofilelink a:link,
+.twitter-text .tweetprofilelink a:visited {
+	color: #404d50;
+}
+
+
+.twitter-text a:hover,
+h1 a:hover,
+.twitter-text .tweetprofilelink a:hover,
+.twitter-text .tweetprofilelink a:active {
+    color: #68b7d0;
+}
+ 
+.twitter-text {
+    width:264px;
+    float:left;
+    padding-left: 11px;
+}
+ 
+.tweet-time {
+    font-size:10px;
+    color:#878787;
+    float:right;
+}
+.tweet-time a:link,
+.tweet-time a:visited,
+.tweet-time a:hover {
+    color:#878787;
+}
+.tweetprofilelink a {
+    color:#444;
+}
+.tweetprofilelink a:hover,
+.twitter-text a:hover {
+    color:#444;
+}
+.backlink {
+    font-size:11px;
+    text-align:center;
+}
+ 
+.backlink a {
+    color:#aaa;
+}
